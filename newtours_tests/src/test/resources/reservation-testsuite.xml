@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Reservation Service">
+    <test name="Reservation positive test">
+
+        <!-- reserveAFlight parameters-->
+        <parameter name="reserveUserName" value="mercury"/>
+        <parameter name="reserveUserPass" value="mercury"/>
+        <!-- name="reserveFlightType" values=["ROUNDTRIP"|"ONEWAY"] -->
+        <parameter name="reserveFlightType" value="ROUNDTRIP"/>
+        <parameter name="reservePassCount" value="2"/>
+        <parameter name="reserveFromPort" value="London"/>
+        <parameter name="reserveFromMonth" value="April"/>
+        <parameter name="reserveFromDay" value="1"/>
+        <parameter name="reserveToPort" value="London"/>
+        <parameter name="reserveToMonth" value="July"/>
+        <parameter name="reserveToDay" value="1"/>
+        <!-- name="reserveFlightPreferences" values=["ECONOMY"|"BUSINESS"|"FIRST"] -->
+        <parameter name="reserveFlightPreferences" value="BUSINESS"/>
+
+        <!-- registerAnAccount parameters-->
+        <parameter name="registerFirstName" value="Test"/>
+        <parameter name="registerLastName" value="Test"/>
+        <parameter name="registerPhone" value="1234567"/>
+        <parameter name="registerUserName" value="test@mail.com"/>
+        <parameter name="registerAddress1" value="Test"/>
+        <parameter name="registerAddress2" value="Test"/>
+        <parameter name="registerCity" value="Test"/>
+        <parameter name="registerState" value="Test"/>
+        <parameter name="registerPostalCode" value="1234567"/>
+        <parameter name="registerCountry" value="ROMANIA"/>
+        <parameter name="registerEmail" value="test@mail.com"/>
+        <parameter name="registerPassword" value="Test1234"/>
+        <parameter name="registerConfirmPassword" value="Test1234"/>
+
+        <!--<groups>
+            <run>
+                <exclude name="RandomValues"/>
+            </run>
+        </groups>-->
+
+        <!-- DemoAutTests.java class -->
+        <classes>
+            <class name="DemoAutTests">
+                <!--<methods>
+                    <exclude name="registerAnAccountRandom"/>
+                </methods>-->
+            </class>
+        </classes>
+    </test>
+</suite>
