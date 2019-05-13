@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -15,11 +16,16 @@ public class DemoAutTests {
 
     WebDriver driver;
 
+    @BeforeClass
+    public static void setupClass() {
+        WebDriverManager.chromedriver().setup();
+    }
+
     @BeforeMethod
     public void startFlow(){
 
-        String path = "C:/Users/gdumitru/Downloads/chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver",path);
+        //String path = "C:/Users/gdumitru/Downloads/chromedriver.exe";
+        //System.setProperty("webdriver.chrome.driver",path);
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -120,6 +126,7 @@ public class DemoAutTests {
 
     //todo sa citesc despre intelij - wip
     //todo git code-ul
+    //todo chromedriver
 
     @AfterMethod
     public void tearDown(){
