@@ -2,10 +2,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-import pageobject.DataProviderForLoginTests;
-import pageobject.FakeData;
-import pageobject.SignOnPage;
-import pageobject.WelcomePage;
+import pageobject.*;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -73,7 +70,7 @@ public class DemoAutTests {
                                @Optional ("ECONOMY") String preferencesClass){
         Random rand = new Random();
         String passCount = String.valueOf(rand.nextInt(5));
-        System.out.println(passCount);
+
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.loginSuccessfully(userName, userPassword)
                 .flightFinder(flightType,passCount,fromPort,fromMonth, fromDay, toPort, toMonth, toDay, preferencesClass)
@@ -108,9 +105,10 @@ public class DemoAutTests {
     @Test(groups = {"RandomValues"})
     public void registerAnAccountRandom( String userName, String address1, String address2
             , String city, String state, String postalCode, String country, String email, String password, String confirmPassword){
-        String firstName = FakeData.getInstance().firstName();
-        String lastName = FakeData.getInstance().lastName();
-        String phone = FakeData.getInstance().phoneNumber();
+
+        String firstName = Fake.INSTANCE.getFake().firstName();
+        String lastName = Fake.INSTANCE.getFake().lastName();
+        String phone = Fake.INSTANCE.getFake().phoneNumber();
 
         WelcomePage registerPage = new WelcomePage(driver);
         registerPage.goToRegister()
