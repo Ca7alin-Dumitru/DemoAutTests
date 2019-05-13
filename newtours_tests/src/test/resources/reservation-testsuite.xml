@@ -35,7 +35,7 @@
 
         <!--<groups>
             <run>
-                <exclude name="RandomValues"/>
+                <exclude name="MyValues"/>
             </run>
         </groups>-->
 

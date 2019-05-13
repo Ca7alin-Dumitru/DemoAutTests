@@ -106,9 +106,9 @@ public class DemoAutTests {
     public void registerAnAccountRandom( String userName, String address1, String address2
             , String city, String state, String postalCode, String country, String email, String password, String confirmPassword){
 
-        String firstName = Fake.INSTANCE.getFake().firstName();
-        String lastName = Fake.INSTANCE.getFake().lastName();
-        String phone = Fake.INSTANCE.getFake().phoneNumber();
+        String firstName = FakeData.INSTANCE.getFake().firstName();
+        String lastName = FakeData.INSTANCE.getFake().lastName();
+        String phone = FakeData.INSTANCE.getFake().phoneNumber();
 
         WelcomePage registerPage = new WelcomePage(driver);
         registerPage.goToRegister()

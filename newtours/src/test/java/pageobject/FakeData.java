@@ -2,18 +2,16 @@ package pageobject;
 
 import com.github.javafaker.Faker;
 
-public class FakeData {
-    private static Faker ourInstance = null;
+public enum FakeData {
+    INSTANCE;
 
-    private FakeData() {
-    }
+    private static Faker connection = null;
 
-    public static Faker getInstance()
-    {
-        if (ourInstance == null) {
-            ourInstance = new Faker();
+    public static Faker getFake() {
+        if (connection == null) {
+            connection = new Faker();
         }
 
-        return ourInstance;
+        return connection;
     }
 }
