@@ -1,6 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 import pageobject.*;
 
@@ -13,17 +14,22 @@ public class DemoAutTests {
 
     WebDriver driver;
 
-    @BeforeClass
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-    }
-
+    @Parameters({"browserName"})
     @BeforeMethod
-    public void startFlow(){
+    public void startFlow(String browser){
 
         //String path = "C:/Users/gdumitru/Downloads/chromedriver.exe";
         //System.setProperty("webdriver.chrome.driver",path);
-        driver = new ChromeDriver();
+        if (browser.equals("chrome")){
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+        }else if (browser.equals("firefox")){
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+        }else {
+            System.out.println("Error! - The value of the browser parameter is not valid!");
+        }
+
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://www.newtours.demoaut.com/");
