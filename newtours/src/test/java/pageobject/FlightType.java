@@ -1,5 +1,7 @@
 package pageobject;
 
+import io.qameta.allure.Step;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -17,6 +19,7 @@ public enum FlightType {
     private static final Random RANDOM = new Random();
 
     //todo colectii, list, -arraylist, map, -hashmap, -concurentmap
+    @Step
     public static FlightType randomFlight()  {
         return VALUES.get(RANDOM.nextInt(SIZE));
     }

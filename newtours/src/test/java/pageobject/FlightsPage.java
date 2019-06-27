@@ -1,5 +1,6 @@
 package pageobject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +16,8 @@ public class FlightsPage extends PageObject{
     public FlightsPage(WebDriver driver){
         super(driver);
     }
+
+    @Step
     public HomePage login(String userName, String password){
         this.userName.sendKeys(userName);
         this.password.sendKeys(password);

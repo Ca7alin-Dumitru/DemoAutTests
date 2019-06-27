@@ -1,5 +1,6 @@
 package pageobject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,8 +33,8 @@ public class SelectFlightPage extends PageObject {
         super(driver);
     }
 
+    @Step
     public BookAFlightPage selectFlight(){
-
         this.blueSkies360.click();
         this.blueSkies361.click();
         this.pangea362.click();

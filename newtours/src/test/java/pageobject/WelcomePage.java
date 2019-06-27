@@ -26,18 +26,21 @@ public class WelcomePage extends PageObject {
         this.login.click();
     }
 
+    @Step
     public FlightFinderPage loginSuccessfully(String userName, String password){
         login(userName,password);
         return new FlightFinderPage(driver);
 
     }
 
+    @Step
     public SignOnPage loginFailed(String userName, String password){
         login(userName,password);
         return new SignOnPage(driver);
 
     }
 
+    @Step
     public RegisterPage goToRegister(){
         this.register.click();
         return new RegisterPage(driver);

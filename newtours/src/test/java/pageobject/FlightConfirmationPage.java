@@ -1,5 +1,6 @@
 package pageobject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,18 +19,21 @@ public class FlightConfirmationPage extends PageObject {
         super(driver);
     }
 
+    @Step
     public FlightFinderPage backToFlight(){
 
         this.backToFlights.click();
         return new FlightFinderPage(driver);
     }
 
+    @Step
     public WelcomePage backToHome(){
 
         this.backToHome.click();
         return new WelcomePage(driver);
     }
 
+    @Step
     public SignOnPage logOut(){
 
         this.logOut.click();

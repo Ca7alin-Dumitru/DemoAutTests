@@ -1,5 +1,6 @@
 package pageobject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,6 +41,7 @@ public class FlightFinderPage extends PageObject{
         super(driver);
     }
 
+    @Step
     public SelectFlightPage flightFinder(String flightType,
                                          String passCount,
                                          String fromPort,
@@ -71,6 +73,7 @@ public class FlightFinderPage extends PageObject{
         return new SelectFlightPage(driver);
     }
 
+    @Step
     public void enumFlightType(String enumParam){
         switch (FlightType.valueOf(enumParam)){
             case ROUNDTRIP:

@@ -1,5 +1,6 @@
 package pageobject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,6 +33,7 @@ public class ProfilePage extends PageObject{
         super(driver);
     }
 
+    @Step
     public WelcomePage editProfile(String firstName,
                                    String lastName,
                                    String phone,
