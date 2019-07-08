@@ -14,6 +14,7 @@
     <modules>
         <module>newtours</module>
         <module>newtours_tests</module>
+        <module>restApi</module>
     </modules>
 
     <dependencies>
