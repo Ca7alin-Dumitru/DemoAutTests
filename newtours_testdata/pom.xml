@@ -72,7 +72,7 @@
                 <resource>
                     <directory>src/main/resources</directory>
                     <includes>
-                        <include>Geeks.xlsx</include>
+                        <include>Login.xlsx</include>
                     </includes>
                 </resource>
             </resources>
