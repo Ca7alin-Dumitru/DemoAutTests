@@ -67,7 +67,7 @@
         </dependency>
     </dependencies>
 
-    <!--    <build>
+        <build>
             <resources>
                 <resource>
                     <directory>src/main/resources</directory>
@@ -76,5 +76,5 @@
                     </includes>
                 </resource>
             </resources>
-        </build>-->
+        </build>
 </project>
