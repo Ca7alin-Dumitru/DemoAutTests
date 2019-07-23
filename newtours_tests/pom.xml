@@ -25,6 +25,13 @@
         </dependency>
 
         <dependency>
+            <groupId>com.demout.newtours</groupId>
+            <artifactId>newtours_testdata</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>3.5.0</version>

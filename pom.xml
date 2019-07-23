@@ -18,9 +18,11 @@
     </properties>
     <!-- sub modules -->
     <modules>
+        <module>network-utils</module>
         <module>newtours</module>
         <module>newtours_tests</module>
         <module>restApi</module>
+        <module>newtours_testdata</module>
     </modules>
 
     <dependencies>

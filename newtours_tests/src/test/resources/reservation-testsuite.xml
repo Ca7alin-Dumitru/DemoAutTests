@@ -37,7 +37,7 @@
 
         <!--<groups>
             <run>
-                <exclude name="MyValues"/>
+                <exclude name="RandomValues"/>
             </run>
         </groups>-->
 
@@ -45,7 +45,8 @@
         <classes>
             <class name="DemoAutTests">
                 <!--<methods>
-                    <exclude name="registerAnAccountRandom"/>
+                    <exclude name="registerAnAccount"/>
+                    <exclude name="reserveAFlight"/>
                 </methods>-->
             </class>
         </classes>
