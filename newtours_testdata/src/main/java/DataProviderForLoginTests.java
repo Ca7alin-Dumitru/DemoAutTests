@@ -17,7 +17,7 @@ public class DataProviderForLoginTests {
         /*File input = new File("Test.xlsx");*/
 
         ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-        File input = new File(classLoader.getResource("Login.xlsx").getFile());
+        File input = new File(classLoader.getResource("Login.XLSX").getFile());
 
         if(input.exists() && !input.isDirectory()) {
             String myArray[][] = new String[2][2];
