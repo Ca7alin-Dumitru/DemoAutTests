@@ -69,13 +69,7 @@ public class DataProviderForLoginTests {
             }
 
             return myArray;
-        }else{
-            input = new File(classLoader.getResource("newtours_testdata/src/main/resources/Login.xlsx").getFile());
-            if(input.exists() && !input.isDirectory()) {
-                System.out.println("Jenkins found the excel");
-            }
         }
-
 
         return new Object[][]{
                 { "", "" },
