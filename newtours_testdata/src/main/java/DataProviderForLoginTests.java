@@ -8,6 +8,7 @@ import org.testng.annotations.DataProvider;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Iterator;
+import java.util.regex.*;
 
 public class DataProviderForLoginTests {
 
@@ -15,9 +16,17 @@ public class DataProviderForLoginTests {
     @DataProvider(name="loginValues")
     public static Object[][] getDataFromDataprovider(){
         /*File input = new File("Test.xlsx");*/
+        String verifyInput;
+        String REGEX = "%20";
 
         ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-        File input = new File(classLoader.getResource("Login.xlsx").getFile());
+
+        verifyInput = classLoader.getResource("Login.xlsx").getFile();
+        Pattern p = Pattern.compile(REGEX);
+        Matcher m = p.matcher(verifyInput);
+        verifyInput = m.replaceAll(" ");
+
+        File input = new File(verifyInput);
 
         if(input.exists() && !input.isDirectory()) {
             String myArray[][] = new String[2][2];
