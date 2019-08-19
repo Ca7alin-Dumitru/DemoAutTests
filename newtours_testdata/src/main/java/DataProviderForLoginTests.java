@@ -61,8 +61,8 @@ public class DataProviderForLoginTests {
 
             return myArray;
         }else{
-            input = new File(classLoader.getResource("newtours_testdata/src/main/resources/Login.xlsx").getFile());
-            if(input.exists() && !input.isDirectory()) {
+            File inputJenkins = new File("newtours_testdata/src/main/resources/Login.xlsx");
+            if(inputJenkins.exists() && !inputJenkins.isDirectory()) {
                 String myArray[][] = new String[2][2];
                 int i = 0;
                 try {
