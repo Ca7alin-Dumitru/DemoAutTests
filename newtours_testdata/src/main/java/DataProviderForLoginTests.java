@@ -7,8 +7,10 @@ import org.testng.annotations.DataProvider;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
-import java.util.regex.*;
 
 public class DataProviderForLoginTests {
 
@@ -16,17 +18,25 @@ public class DataProviderForLoginTests {
     @DataProvider(name="loginValues")
     public static Object[][] getDataFromDataprovider(){
         /*File input = new File("Test.xlsx");*/
-        String verifyInput;
-        String REGEX = "%20";
+        /*String verifyInput;
+        String REGEX = "%20";*/
 
         ClassLoader classLoader = ClassLoader.getSystemClassLoader();
 
-        verifyInput = classLoader.getResource("Login.xlsx").getFile();
+        /*verifyInput = classLoader.getResource("Login.xlsx").getFile();
         Pattern p = Pattern.compile(REGEX);
         Matcher m = p.matcher(verifyInput);
-        verifyInput = m.replaceAll(" ");
+        verifyInput = m.replaceAll(" ");*/
+        File input;
+        try {
+            input = new File(URLDecoder.decode(classLoader.getResource("Login.xlsx").getFile(), StandardCharsets.UTF_8.toString()));
+        }catch (UnsupportedEncodingException ex) {
+            throw new RuntimeException(ex.getCause());
+        }
 
-        File input = new File(verifyInput);
+
+
+
 
         if(input.exists() && !input.isDirectory()) {
             String myArray[][] = new String[2][2];
