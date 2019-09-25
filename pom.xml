@@ -23,8 +23,8 @@
         <module>newtours_tests</module>
         <!--<module>restApi</module>-->
         <module>newtours_testdata</module>
-        <module>cucumber_reader</module>
-        <module>excel-reader</module>
+        <!--<module>cucumber_reader</module>
+        <module>excel-reader</module>-->
         <module>testdata-generator</module>
         <module>singleton</module>
     </modules>
