@@ -23,6 +23,10 @@
         <module>newtours_tests</module>
         <!--<module>restApi</module>-->
         <module>newtours_testdata</module>
+        <module>cucumber_reader</module>
+        <module>excel-reader</module>
+        <module>testdata-generator</module>
+        <module>singleton</module>
     </modules>
 
     <dependencies>
@@ -53,7 +57,7 @@
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
-            <version>0.2</version>
+            <version>1.0.1</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

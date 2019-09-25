@@ -1,6 +1,7 @@
 package pageobject;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +15,8 @@ public class WelcomePage extends PageObject {
     private WebElement login;
     @FindBy(xpath = "//a[contains(text(),'REGISTER')]")
     private WebElement register;
+    @FindBy(name = "passFirst0")
+    private WebElement passFirst0;
 
     public WelcomePage(WebDriver driver){
         super(driver);
@@ -21,6 +24,8 @@ public class WelcomePage extends PageObject {
 
     @Step
     private void login(String userName, String password){
+        PageObject.waitForElementToAppear(By.name("userName"));
+        PageObject.waitForElementToBeClickable(login);
         this.userName.sendKeys(userName);
         this.password.sendKeys(password);
         this.login.click();

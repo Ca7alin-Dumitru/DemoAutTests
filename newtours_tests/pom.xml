@@ -58,6 +58,13 @@
             <version>6.14.3</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.demout.newtours</groupId>
+            <artifactId>testdata-generator</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <build>

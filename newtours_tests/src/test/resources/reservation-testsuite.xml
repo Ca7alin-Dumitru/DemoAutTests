@@ -35,30 +35,29 @@
         <parameter name="registerPassword" value="Test1234"/>
         <parameter name="registerConfirmPassword" value="Test1234"/>
 
-        <groups>
+        <!--<groups>
             <run>
-                <exclude name="RandomValues"/>
+                <exclude name="MyValues"/>
             </run>
-        </groups>
+        </groups>-->
 
         <!-- DemoAutTests.java class -->
         <classes>
             <class name="DemoAutTests">
-                <methods>
-                    <exclude name="registerAnAccount"/>
-                    <exclude name="reserveAFlight"/>
-                </methods>
+                <!--<methods>
+                    <exclude name="reserveAFlightRandom"/>
+                </methods>-->
             </class>
         </classes>
     </test>
-    <!--<test name="Reservation positive test Firefox">
+    <test name="Reservation positive test Firefox">
 
         <parameter name="browserName" value="firefox"/>
 
-        &lt;!&ndash; reserveAFlight parameters&ndash;&gt;
+        <!-- reserveAFlight parameters-->
         <parameter name="reserveUserName" value="mercury"/>
         <parameter name="reserveUserPass" value="mercury"/>
-        &lt;!&ndash; name="reserveFlightType" values=["ROUNDTRIP"|"ONEWAY"] &ndash;&gt;
+        <!-- name="reserveFlightType" values=["ROUNDTRIP"|"ONEWAY"] -->
         <parameter name="reserveFlightType" value="ROUNDTRIP"/>
         <parameter name="reservePassCount" value="2"/>
         <parameter name="reserveFromPort" value="London"/>
@@ -67,10 +66,10 @@
         <parameter name="reserveToPort" value="London"/>
         <parameter name="reserveToMonth" value="July"/>
         <parameter name="reserveToDay" value="1"/>
-        &lt;!&ndash; name="reserveFlightPreferences" values=["ECONOMY"|"BUSINESS"|"FIRST"] &ndash;&gt;
+        <!-- name="reserveFlightPreferences" values=["ECONOMY"|"BUSINESS"|"FIRST"] -->
         <parameter name="reserveFlightPreferences" value="BUSINESS"/>
 
-        &lt;!&ndash; registerAnAccount parameters&ndash;&gt;
+        <!-- registerAnAccount parameters-->
         <parameter name="registerFirstName" value="Test"/>
         <parameter name="registerLastName" value="Test"/>
         <parameter name="registerPhone" value="1234567"/>
@@ -85,19 +84,19 @@
         <parameter name="registerPassword" value="Test1234"/>
         <parameter name="registerConfirmPassword" value="Test1234"/>
 
-        &lt;!&ndash;<groups>
+        <!--<groups>
             <run>
                 <exclude name="MyValues"/>
             </run>
-        </groups>&ndash;&gt;
+        </groups>-->
 
-        &lt;!&ndash; DemoAutTests.java class &ndash;&gt;
+        <!-- DemoAutTests.java class -->
         <classes>
             <class name="DemoAutTests">
-                &lt;!&ndash;<methods>
+                <!--<methods>
                     <exclude name="registerAnAccountRandom"/>
-                </methods>&ndash;&gt;
+                </methods>-->
             </class>
         </classes>
-    </test>-->
+    </test>
 </suite>

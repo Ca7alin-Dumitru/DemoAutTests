@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 import pageobject.*;
+import data.generator.*;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -112,9 +113,9 @@ public class DemoAutTests {
     public void registerAnAccountRandom( String userName, String address1, String address2
             , String city, String state, String postalCode, String country, String email, String password, String confirmPassword){
 
-        String firstName = FakeData.INSTANCE.getFake().firstName();
-        String lastName = FakeData.INSTANCE.getFake().lastName();
-        String phone = FakeData.INSTANCE.getFake().phoneNumber();
+        String firstName = Name.firstName();
+        String lastName = Name.lastName();
+        String phone = Phone.phoneNumber();
 
         WelcomePage registerPage = new WelcomePage(driver);
         registerPage.goToRegister()
