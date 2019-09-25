@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Reservation Service" parallel="tests" thread-count="2">
-    <test name="Reservation positive test Chrome">
+    <test name="Reservation positive test Chrome" enabled="true">
 
         <parameter name="browserName" value="chrome"/>
 
@@ -50,7 +50,7 @@
             </class>
         </classes>
     </test>
-    <test name="Reservation positive test Firefox">
+    <test name="Reservation positive test Firefox" enabled="false">
 
         <parameter name="browserName" value="firefox"/>
 
